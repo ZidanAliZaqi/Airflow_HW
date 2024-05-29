@@ -27,7 +27,7 @@ PySpark wordcount.py.
     ![Screenshot (756)](https://github.com/ZidanAliZaqi/Airflow_HW/assets/97864880/025a4602-e477-4ec1-a293-32d48f8e3802)
     ![Screenshot (757)](https://github.com/ZidanAliZaqi/Airflow_HW/assets/97864880/b9ef4e16-a45f-4895-913b-c51ba106f577)
     ![add conn](https://github.com/ZidanAliZaqi/Airflow_HW/assets/97864880/cbd0a8e4-36ee-4e4e-b132-0c9ed689a3a4)
-    Akan Tetapi Program tidak bisa dijalankan karena ada error dikarenakan sudah deadline maka saya kumpulkan apa adanya
+    Mohon maaf, namun saya mengalami error dalam menjalankan program karena terdapat beberapa kesalahan yang belum dapat saya perbaiki. Mengingat bahwa batas waktu sudah mendekati, dengan segala keterbatasan yang ada, saya akan mengumpulkan apa yang telah saya kerjakan. Terima kasih.
     ![error](https://github.com/ZidanAliZaqi/Airflow_HW/assets/97864880/c188f6df-e1bd-4f99-8981-5aa2b6008ee3)
 Berikut Errornya:
 ```bash
