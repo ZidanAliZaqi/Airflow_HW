@@ -6,20 +6,18 @@ Instruksi:
 1. Persiapkan Airflow: Pastikan Airflow telah terinstal dan dikonfigurasi dengan benar di lingkungan 
 Anda.
 2. Buat Skrip PySpark:
+   a. Buatlah sebuah skrip PySpark sederhana dengan nama wordcount.py yang 
+   menghitung jumlah kemunculan setiap kata dalam file teks book.txt.
    ![wc](https://github.com/ZidanAliZaqi/Airflow_HW/assets/97864880/a1b6a010-fce6-4b1e-8ef0-979d33ba507f)
-a. Buatlah sebuah skrip PySpark sederhana dengan nama wordcount.py yang 
-menghitung jumlah kemunculan setiap kata dalam file teks book.txt.
 4. Buat DAG Baru:
+   a. Buatlah file Python baru dengan nama pyspark_dag.py di dalam direktori dags Airflow Anda.
    ![pyspa](https://github.com/ZidanAliZaqi/Airflow_HW/assets/97864880/e270ecf2-96ca-48ec-99a3-83b9af32d526)
-a. Buatlah file Python baru dengan nama pyspark_dag.py di dalam direktori dags 
-Airflow Anda.
 6. Definisikan DAG:
+   a. Buat sebuah DAG yang dijadwalkan untuk berjalan setiap hari.
    ![jalan tiap hari](https://github.com/ZidanAliZaqi/Airflow_HW/assets/97864880/737a08ce-77d7-41fb-88e5-7ed404ac25bd)
-a. Buat sebuah DAG yang dijadwalkan untuk berjalan setiap hari.
 8. Gunakan SparkSubmitOperator:
+   a. Tambahkan tugas menggunakan SparkSubmitOperator untuk menjalankan skrip PySpark wordcount.py.
    ![spark submit](https://github.com/ZidanAliZaqi/Airflow_HW/assets/97864880/ec8f600e-be9d-4c5a-a6dd-9e15c80bba83)
-a. Tambahkan tugas menggunakan SparkSubmitOperator untuk menjalankan skrip 
-PySpark wordcount.py.
 9. Konfigurasi Dependensi:
 10. Pastikan tugas dalam DAG memiliki dependensi yang benar.
 11. Jalankan dan Verifikasi:
@@ -29,6 +27,7 @@ PySpark wordcount.py.
     ![add conn](https://github.com/ZidanAliZaqi/Airflow_HW/assets/97864880/cbd0a8e4-36ee-4e4e-b132-0c9ed689a3a4)
     Mohon maaf, namun saya mengalami error dalam menjalankan program karena terdapat beberapa kesalahan yang belum dapat saya perbaiki. Mengingat bahwa batas waktu sudah mendekati, dengan segala keterbatasan yang ada, saya akan mengumpulkan apa yang telah saya kerjakan. Terima kasih.
     ![error](https://github.com/ZidanAliZaqi/Airflow_HW/assets/97864880/c188f6df-e1bd-4f99-8981-5aa2b6008ee3)
+
 Berikut Errornya:
 ```bash
 /opt/airflow/logs/dag_id=pyspark_dag/run_id=manual__2024-05-29T16:13:25.821502+00:00/task_id=wordcount/attempt=1.log
