@@ -1,0 +1,25 @@
+[2024-05-29T08:27:41.832+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: pyspark_dag.book manual__2024-05-29T08:27:32.041320+00:00 [queued]>
+[2024-05-29T08:27:41.875+0000] {taskinstance.py:1157} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: pyspark_dag.book manual__2024-05-29T08:27:32.041320+00:00 [queued]>
+[2024-05-29T08:27:41.876+0000] {taskinstance.py:1359} INFO - Starting attempt 1 of 1
+[2024-05-29T08:27:41.917+0000] {taskinstance.py:1380} INFO - Executing <Task(SparkSubmitOperator): book> on 2024-05-29 08:27:32.041320+00:00
+[2024-05-29T08:27:41.929+0000] {standard_task_runner.py:57} INFO - Started process 231 to run task
+[2024-05-29T08:27:41.944+0000] {standard_task_runner.py:84} INFO - Running: ['***', 'tasks', 'run', 'pyspark_dag', 'book', 'manual__2024-05-29T08:27:32.041320+00:00', '--job-id', '18', '--raw', '--subdir', 'DAGS_FOLDER/pyspark_dag.py', '--cfg-path', '/tmp/tmpx39avn2k']
+[2024-05-29T08:27:41.955+0000] {standard_task_runner.py:85} INFO - Job 18: Subtask book
+[2024-05-29T08:27:42.404+0000] {task_command.py:415} INFO - Running <TaskInstance: pyspark_dag.book manual__2024-05-29T08:27:32.041320+00:00 [running]> on host 6a68db426262
+[2024-05-29T08:27:43.022+0000] {taskinstance.py:1660} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='Zidan Ali Zaqi' AIRFLOW_CTX_DAG_ID='pyspark_dag' AIRFLOW_CTX_TASK_ID='book' AIRFLOW_CTX_EXECUTION_DATE='2024-05-29T08:27:32.041320+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='manual__2024-05-29T08:27:32.041320+00:00'
+[2024-05-29T08:27:43.078+0000] {base.py:73} INFO - Using connection ID 'spark-conn' for task execution.
+[2024-05-29T08:27:43.091+0000] {spark_submit.py:401} INFO - Spark-Submit cmd: spark-submit --master spark://172.18.0.3:7077 --files jobs/python/book.txt --name arrow-spark --deploy-mode client jobs/python/book.py
+[2024-05-29T08:27:43.892+0000] {spark_submit.py:571} INFO - /home/***/.local/lib/python3.11/site-packages/pyspark/bin/load-spark-env.sh: line 68: ps: command not found
+[2024-05-29T08:27:43.901+0000] {spark_submit.py:571} INFO - /home/***/.local/lib/python3.11/site-packages/pyspark/bin/spark-class: line 71: /usr/lib/jvm/java-11-openjdk-arm64/bin/java: No such file or directory
+[2024-05-29T08:27:43.905+0000] {spark_submit.py:571} INFO - /home/***/.local/lib/python3.11/site-packages/pyspark/bin/spark-class: line 97: CMD: bad array subscript
+[2024-05-29T08:27:43.966+0000] {taskinstance.py:1935} ERROR - Task failed with exception
+Traceback (most recent call last):
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/apache/spark/operators/spark_submit.py", line 174, in execute
+    self._hook.submit(self.application)
+  File "/home/airflow/.local/lib/python3.11/site-packages/airflow/providers/apache/spark/hooks/spark_submit.py", line 502, in submit
+    raise AirflowException(
+airflow.exceptions.AirflowException: Cannot execute: spark-submit --master spark://172.18.0.3:7077 --files jobs/python/book.txt --name arrow-spark --deploy-mode client jobs/python/book.py. Error code is: 1.
+[2024-05-29T08:27:43.979+0000] {taskinstance.py:1398} INFO - Marking task as FAILED. dag_id=pyspark_dag, task_id=book, execution_date=20240529T082732, start_date=20240529T082741, end_date=20240529T082743
+[2024-05-29T08:27:44.013+0000] {standard_task_runner.py:104} ERROR - Failed to execute job 18 for task book (Cannot execute: spark-submit --master spark://172.18.0.3:7077 --files jobs/python/book.txt --name arrow-spark --deploy-mode client jobs/python/book.py. Error code is: 1.; 231)
+[2024-05-29T08:27:44.049+0000] {local_task_job_runner.py:228} INFO - Task exited with return code 1
+[2024-05-29T08:27:44.127+0000] {taskinstance.py:2776} INFO - 0 downstream tasks scheduled from follow-on schedule check
